@@ -395,22 +395,22 @@ namespace WeenieFab
                     case 6:  // MeleeD
                     case 46: // Finesse Weapons
                     case 51: // Sneak Attack
-                        tbSkillFinalLevel.Text = (ConvertToInteger(tbSkillLevel.Text) + ((quick + coord) / 3)).ToString();
+                        tbSkillFinalLevel.Text = (ConvertToInteger(tbSkillLevel.Text) + ((quick + coord) / 3) + (rdbSpec.IsChecked ?? false ? 10 : 5)).ToString();
                         break;
                     case 7:  // MissileD
-                        tbSkillFinalLevel.Text = (ConvertToInteger(tbSkillLevel.Text) + ((quick + coord) / 5)).ToString();
+                        tbSkillFinalLevel.Text = (ConvertToInteger(tbSkillLevel.Text) + ((quick + coord) / 5) + (rdbSpec.IsChecked ?? false ? 10 : 5)).ToString();
                         break;
                     case 14:  // Arcane Lore
-                        tbSkillFinalLevel.Text = (ConvertToInteger(tbSkillLevel.Text) + (focus / 3)).ToString();
+                        tbSkillFinalLevel.Text = (ConvertToInteger(tbSkillLevel.Text) + (focus / 3) + (rdbSpec.IsChecked ?? false ? 10 : 5)).ToString();
                         break;
                     case 15:  // Magic D
-                        tbSkillFinalLevel.Text = (ConvertToInteger(tbSkillLevel.Text) + ((focus + self) / 7)).ToString();
+                        tbSkillFinalLevel.Text = (ConvertToInteger(tbSkillLevel.Text) + ((focus + self) / 7) + (rdbSpec.IsChecked ?? false ? 10 : 5)).ToString();
                         break;
                     case 16:  // Mana C
-                        tbSkillFinalLevel.Text = (ConvertToInteger(tbSkillLevel.Text) + ((focus + self) / 6)).ToString();
+                        tbSkillFinalLevel.Text = (ConvertToInteger(tbSkillLevel.Text) + ((focus + self) / 6) + (rdbSpec.IsChecked ?? false ? 10 : 5)).ToString();
                         break;
                     case 18:  // Item Appraisal - Item Tink
-                        tbSkillFinalLevel.Text = (ConvertToInteger(tbSkillLevel.Text) + ((focus + coord) / 2)).ToString();
+                        tbSkillFinalLevel.Text = (ConvertToInteger(tbSkillLevel.Text) + ((focus + coord) / 2) + (rdbSpec.IsChecked ?? false ? 10 : 5)).ToString();
                         break;
                     case 19:  // Personal Appraisal - Assess Person
                     case 20:  // Deception
@@ -418,55 +418,55 @@ namespace WeenieFab
                     case 35:  // Leadership
                     case 36:  // Loyalty
                     case 40:  // Salvaging
-                        tbSkillFinalLevel.Text = (ConvertToInteger(tbSkillLevel.Text)).ToString();
+                        tbSkillFinalLevel.Text = (ConvertToInteger(tbSkillLevel.Text) + (rdbSpec.IsChecked ?? false ? 10 : 5)).ToString();
                         break;
                     case 21:  // Healing
                     case 23:  // Lockpick
                     case 37:  // Fletching
                     case 38:  // Alchemy
                     case 39:  // Cooking
-                        tbSkillFinalLevel.Text = (ConvertToInteger(tbSkillLevel.Text) + ((focus + coord) / 3)).ToString();
+                        tbSkillFinalLevel.Text = (ConvertToInteger(tbSkillLevel.Text) + ((focus + coord) / 3) + (rdbSpec.IsChecked ?? false ? 10 : 5)).ToString();
                         break;
                     case 22:  // Jump
                     case 48:  // Shield
-                        tbSkillFinalLevel.Text = (ConvertToInteger(tbSkillLevel.Text) + ((strength + coord) / 2)).ToString();
+                        tbSkillFinalLevel.Text = (ConvertToInteger(tbSkillLevel.Text) + ((strength + coord) / 2) + (rdbSpec.IsChecked ?? false ? 10 : 5)).ToString();
                         break;
                     case 24:  // Run
-                        tbSkillFinalLevel.Text = (ConvertToInteger(tbSkillLevel.Text) + quick).ToString();
+                        tbSkillFinalLevel.Text = (ConvertToInteger(tbSkillLevel.Text) + quick + (rdbSpec.IsChecked ?? false ? 10 : 5)).ToString();
                         break;
                     case 28:  // Weapon Appraisal - Weapon Tink
-                        tbSkillFinalLevel.Text = (ConvertToInteger(tbSkillLevel.Text) + ((focus + strength) / 2)).ToString();
+                        tbSkillFinalLevel.Text = (ConvertToInteger(tbSkillLevel.Text) + ((focus + strength) / 2) + (rdbSpec.IsChecked ?? false ? 10 : 5)).ToString();
                         break;
                     case 29:  // Armor Appraisal - Armor Tink
-                        tbSkillFinalLevel.Text = (ConvertToInteger(tbSkillLevel.Text) + ((focus + endur) / 2)).ToString();
+                        tbSkillFinalLevel.Text = (ConvertToInteger(tbSkillLevel.Text) + ((focus + endur) / 2) + (rdbSpec.IsChecked ?? false ? 10 : 5)).ToString();
                         break;
                     case 30:  // Magic Item Appraisal - Magic Item Tink
-                        tbSkillFinalLevel.Text = (ConvertToInteger(tbSkillLevel.Text) + focus).ToString();
+                        tbSkillFinalLevel.Text = (ConvertToInteger(tbSkillLevel.Text) + focus + (rdbSpec.IsChecked ?? false ? 10 : 5)).ToString();
                         break;
                     case 31:  // Creature Magic
                     case 32:  // Item Magic
                     case 33:  // Life Magic
                     case 34:  // War Magic
                     case 43:  // Void Magic
-                        tbSkillFinalLevel.Text = (ConvertToInteger(tbSkillLevel.Text) + ((focus + self) / 4)).ToString();
+                        tbSkillFinalLevel.Text = (ConvertToInteger(tbSkillLevel.Text) + ((focus + self) / 4) + (rdbSpec.IsChecked ?? false ? 10 : 5)).ToString();
                         break;
                     case 41:  // Two Hand
                     case 44:  // Heavy Weapons
                     case 45:  // Light Weapons
                     case 52:  // Dirty Fighting
-                        tbSkillFinalLevel.Text = (ConvertToInteger(tbSkillLevel.Text) + ((strength + coord) / 3)).ToString();
+                        tbSkillFinalLevel.Text = (ConvertToInteger(tbSkillLevel.Text) + ((strength + coord) / 3) + (rdbSpec.IsChecked ?? false ? 10 : 5)).ToString();
                         break;
                     case 47:  // Missile Weapons
-                        tbSkillFinalLevel.Text = (ConvertToInteger(tbSkillLevel.Text) + coord / 2).ToString();
+                        tbSkillFinalLevel.Text = (ConvertToInteger(tbSkillLevel.Text) + coord / 2 + (rdbSpec.IsChecked ?? false ? 10 : 5)).ToString();
                         break;
                     case 49:  // Dual Wield
-                        tbSkillFinalLevel.Text = (ConvertToInteger(tbSkillLevel.Text) + ((coord * 2) / 3)).ToString();
+                        tbSkillFinalLevel.Text = (ConvertToInteger(tbSkillLevel.Text) + ((coord * 2) / 3) + (rdbSpec.IsChecked ?? false ? 10 : 5)).ToString();
                         break;
                     case 50:  // Recklessness
-                        tbSkillFinalLevel.Text = (ConvertToInteger(tbSkillLevel.Text) + ((strength + quick) / 3)).ToString();
+                        tbSkillFinalLevel.Text = (ConvertToInteger(tbSkillLevel.Text) + ((strength + quick) / 3) + (rdbSpec.IsChecked ?? false ? 10 : 5)).ToString();
                         break;
                     case 54:  // Summoning
-                        tbSkillFinalLevel.Text = (ConvertToInteger(tbSkillLevel.Text) + ((endur + self) / 3)).ToString();
+                        tbSkillFinalLevel.Text = (ConvertToInteger(tbSkillLevel.Text) + ((endur + self) / 3) + (rdbSpec.IsChecked ?? false ? 10 : 5)).ToString();
                         break;
                     case 1: // Axe
                     case 5: // Mace
@@ -474,15 +474,15 @@ namespace WeenieFab
                     case 10: // Staff
                     case 11: // Sword
                     case 13: // Unarmed Combat
-                        tbSkillFinalLevel.Text = (ConvertToInteger(tbSkillLevel.Text) + ((strength + coord) / 3)).ToString();
+                        tbSkillFinalLevel.Text = (ConvertToInteger(tbSkillLevel.Text) + ((strength + coord) / 3) + (rdbSpec.IsChecked ?? false ? 10 : 5)).ToString();
                         break;
                     case 2: // Bow
                     case 3: // Crossbow
                     case 12: // Thrown Weapon
-                        tbSkillFinalLevel.Text = (ConvertToInteger(tbSkillLevel.Text) + coord / 2).ToString();
+                        tbSkillFinalLevel.Text = (ConvertToInteger(tbSkillLevel.Text) + coord / 2 + (rdbSpec.IsChecked ?? false ? 10 : 5)).ToString();
                         break;
                     case 4: // Dagger
-                        tbSkillFinalLevel.Text = (ConvertToInteger(tbSkillLevel.Text) + ((quick + coord) / 3)).ToString();
+                        tbSkillFinalLevel.Text = (ConvertToInteger(tbSkillLevel.Text) + ((quick + coord) / 3) + (rdbSpec.IsChecked ?? false ? 10 : 5)).ToString();
                         break;
                     // Ignored (Unused)
                     case 0:
