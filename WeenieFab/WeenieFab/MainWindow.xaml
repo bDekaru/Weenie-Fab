@@ -1983,30 +1983,31 @@
                                 </Paragraph>
                             </FlowDocument>
                         </RichTextBox>
-                        <Grid HorizontalAlignment="Left" Height="76" Margin="336,142,0,0" VerticalAlignment="Top" Width="508">
+                        <Grid HorizontalAlignment="Left" Height="99" Margin="336,136,0,0" VerticalAlignment="Top" Width="508">
                             <Label Content="Base" HorizontalAlignment="Left" Margin="8,29,0,0" VerticalAlignment="Top"/>
-                            <TextBox x:Name="tbBodyPartArmorLevel" PreviewTextInput="IntValidationTextBox" HorizontalAlignment="Left" Margin="0,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="52" ToolTip="Body Part Base Armor Level"/>
+                            <TextBox x:Name="tbBodyPartArmorLevel" PreviewTextInput="IntValidationTextBox" HorizontalAlignment="Left" Margin="0,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="52" ToolTip="Body Part Base Armor Level" TextChanged="tbBodyPartArmorLevel_TextChanged"/>
                             <Label Content="Slash" HorizontalAlignment="Left" Margin="64,29,0,0" VerticalAlignment="Top"/>
-                            <TextBox x:Name="tbBodyPartArmorLevelSlash" PreviewTextInput="IntValidationTextBox" HorizontalAlignment="Left" Margin="57,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="52" ToolTip="Body Part Base Armor Level"/>
+                            <TextBox x:Name="tbBodyPartArmorLevelSlash" PreviewTextInput="IntValidationTextBox" HorizontalAlignment="Left" Margin="57,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="52" ToolTip="Body Part Slash Armor Level" IsReadOnly="True"/>
                             <Label Content="Pierce" HorizontalAlignment="Left" Margin="119,29,0,0" VerticalAlignment="Top"/>
-                            <TextBox x:Name="tbBodyPartArmorLevelPierce" PreviewTextInput="IntValidationTextBox" HorizontalAlignment="Left" Margin="114,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="52" ToolTip="Body Part Base Armor Level"/>
+                            <TextBox x:Name="tbBodyPartArmorLevelPierce" PreviewTextInput="IntValidationTextBox" HorizontalAlignment="Left" Margin="114,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="52" ToolTip="Body Part Pierce Armor Level" IsReadOnly="True"/>
                             <Label Content="Bludgeon" HorizontalAlignment="Left" Margin="167,29,0,0" VerticalAlignment="Top"/>
-                            <TextBox x:Name="tbBodyPartArmorLevelBludgeon" PreviewTextInput="IntValidationTextBox" HorizontalAlignment="Left" Margin="171,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="52" ToolTip="Body Part Base Armor Level"/>
+                            <TextBox x:Name="tbBodyPartArmorLevelBludgeon" PreviewTextInput="IntValidationTextBox" HorizontalAlignment="Left" Margin="171,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="52" ToolTip="Body Part Bludgeon Armor Level" IsReadOnly="True"/>
                             <Label Content="Cold" HorizontalAlignment="Center" Margin="0,29,0,0" VerticalAlignment="Top"/>
-                            <TextBox x:Name="tbBodyPartArmorLevelCold" PreviewTextInput="IntValidationTextBox" HorizontalAlignment="Center" Margin="0,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="52" ToolTip="Body Part Base Armor Level"/>
+                            <TextBox x:Name="tbBodyPartArmorLevelCold" PreviewTextInput="IntValidationTextBox" HorizontalAlignment="Center" Margin="0,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="52" ToolTip="Body Part Cold Armor Level" IsReadOnly="True"/>
                             <Label Content="Fire" HorizontalAlignment="Left" Margin="296,29,0,0" VerticalAlignment="Top"/>
-                            <TextBox x:Name="tbBodyPartArmorLevelFire" PreviewTextInput="IntValidationTextBox" HorizontalAlignment="Left" Margin="285,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="52" ToolTip="Body Part Base Armor Level"/>
+                            <TextBox x:Name="tbBodyPartArmorLevelFire" PreviewTextInput="IntValidationTextBox" HorizontalAlignment="Left" Margin="285,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="52" ToolTip="Body Part Fire Armor Level" IsReadOnly="True"/>
                             <Label Content="Acid" HorizontalAlignment="Left" Margin="350,29,0,0" VerticalAlignment="Top"/>
-                            <TextBox x:Name="tbBodyPartArmorLevelAcid" PreviewTextInput="IntValidationTextBox" HorizontalAlignment="Left" Margin="342,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="52" ToolTip="Body Part Base Armor Level"/>
+                            <TextBox x:Name="tbBodyPartArmorLevelAcid" PreviewTextInput="IntValidationTextBox" HorizontalAlignment="Left" Margin="342,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="52" ToolTip="Body Part Acid Armor Level" IsReadOnly="True"/>
                             <Label Content="Electric" HorizontalAlignment="Left" Margin="400,29,0,0" VerticalAlignment="Top"/>
-                            <TextBox x:Name="tbBodyPartArmorLevelElectric" PreviewTextInput="IntValidationTextBox" HorizontalAlignment="Left" Margin="398,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="52" ToolTip="Body Part Base Armor Level"/>
+                            <TextBox x:Name="tbBodyPartArmorLevelElectric" PreviewTextInput="IntValidationTextBox" HorizontalAlignment="Left" Margin="398,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="52" ToolTip="Body Part Electric Armor Level" IsReadOnly="True"/>
                             <Label Content="Nether" HorizontalAlignment="Left" Margin="459,29,0,0" VerticalAlignment="Top"/>
-                            <TextBox x:Name="tbBodyPartArmorLevelNether" PreviewTextInput="IntValidationTextBox" HorizontalAlignment="Left" Margin="455,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="52" ToolTip="Body Part Base Armor Level"/>
+                            <TextBox x:Name="tbBodyPartArmorLevelNether" PreviewTextInput="IntValidationTextBox" HorizontalAlignment="Left" Margin="455,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="52" ToolTip="Body Part Nether Armor Level" IsReadOnly="True"/>
                             <Label Content="Armor" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14"/>
+                            <Label Content="To change these values edit the appropriate float property(ArmorModVsX)" HorizontalAlignment="Left" Margin="72,71,0,0" VerticalAlignment="Top"/>
                         </Grid>
-                        <Label Content="Multiply All Armor By Factor" HorizontalAlignment="Left" Margin="976,167,0,0" VerticalAlignment="Top"/>
-                        <TextBox x:Name="tbMultiplyAllArmor" PreviewTextInput="FloatValidationTextBox" HorizontalAlignment="Left" Margin="1063,196,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="77" ToolTip="Multiply all armor by this value"/>
-                        <Button x:Name="btnScaleArmor" Content="Scale" HorizontalAlignment="Left" Margin="981,195,0,0" VerticalAlignment="Top" ToolTip="Multiply All Armor by Factor" Click="btnScaleArmor_Click"/>
+                        <Label Content="Multiply Armor By Factor" HorizontalAlignment="Left" Margin="987,168,0,0" VerticalAlignment="Top"/>
+                        <TextBox x:Name="tbMultiplyAllArmor" PreviewTextInput="FloatValidationTextBox" HorizontalAlignment="Left" Margin="1065,191,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="77" ToolTip="Multiply all armor by this value"/>
+                        <Button x:Name="btnScaleArmor" Content="Scale" HorizontalAlignment="Left" Margin="983,190,0,0" VerticalAlignment="Top" ToolTip="Multiply All Armor by Factor" Click="btnScaleArmor_Click"/>
                     </Grid>
                 </TabItem>
                 <TabItem Header="SpellBook">

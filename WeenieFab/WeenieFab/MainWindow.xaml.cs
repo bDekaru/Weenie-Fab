@@ -1,4 +1,5 @@
-﻿using Microsoft.Win32;
+﻿using ACE.Entity.Enum.Properties;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -740,6 +741,61 @@ namespace WeenieFab
             TextBox txtBox = sender as TextBox;
             if(!txtBox.IsReadOnly)
                 txtBox.SelectAll();
+        }
+
+        private void tbBodyPartArmorLevel_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (int.TryParse(tbBodyPartArmorLevel.Text, out var armorBase))
+            {
+                float armorModVsSlash = 0;
+                DataRow[] rows = floatDataTable.Select($"Property = {(int)PropertyFloat.ArmorModVsSlash}");
+                if (rows.Length > 0)
+                    armorModVsSlash = (float)rows[0].ItemArray[1];
+
+                float armorModVsPierce = 0;
+                rows = floatDataTable.Select($"Property = {(int)PropertyFloat.ArmorModVsPierce}");
+                if (rows.Length > 0)
+                    armorModVsPierce = (float)rows[0].ItemArray[1];
+
+                float armorModVsBludgeon = 0;
+                rows = floatDataTable.Select($"Property = {(int)PropertyFloat.ArmorModVsBludgeon}");
+                if (rows.Length > 0)
+                    armorModVsBludgeon = (float)rows[0].ItemArray[1];
+
+                float armorModVsCold = 0;
+                rows = floatDataTable.Select($"Property = {(int)PropertyFloat.ArmorModVsCold}");
+                if (rows.Length > 0)
+                    armorModVsCold = (float)rows[0].ItemArray[1];
+
+                float armorModVsFire = 0;
+                rows = floatDataTable.Select($"Property = {(int)PropertyFloat.ArmorModVsFire}");
+                if (rows.Length > 0)
+                    armorModVsFire = (float)rows[0].ItemArray[1];
+
+                float armorModVsAcid = 0;
+                rows = floatDataTable.Select($"Property = {(int)PropertyFloat.ArmorModVsAcid}");
+                if (rows.Length > 0)
+                    armorModVsAcid = (float)rows[0].ItemArray[1];
+
+                float armorModVsElectric = 0;
+                rows = floatDataTable.Select($"Property = {(int)PropertyFloat.ArmorModVsElectric}");
+                if (rows.Length > 0)
+                    armorModVsElectric = (float)rows[0].ItemArray[1];
+
+                float armorModVsNether = 0;
+                rows = floatDataTable.Select($"Property = {(int)PropertyFloat.ArmorModVsNether}");
+                if (rows.Length > 0)
+                    armorModVsNether = (float)rows[0].ItemArray[1];
+
+                tbBodyPartArmorLevelSlash.Text = Math.Round(armorBase * armorModVsSlash).ToString();
+                tbBodyPartArmorLevelPierce.Text = Math.Round(armorBase * armorModVsPierce).ToString();
+                tbBodyPartArmorLevelBludgeon.Text = Math.Round(armorBase * armorModVsBludgeon).ToString();
+                tbBodyPartArmorLevelCold.Text = Math.Round(armorBase * armorModVsCold).ToString();
+                tbBodyPartArmorLevelFire.Text = Math.Round(armorBase * armorModVsFire).ToString();
+                tbBodyPartArmorLevelAcid.Text = Math.Round(armorBase * armorModVsAcid).ToString();
+                tbBodyPartArmorLevelElectric.Text = Math.Round(armorBase * armorModVsElectric).ToString();
+                tbBodyPartArmorLevelNether.Text = Math.Round(armorBase * armorModVsNether).ToString();
+            }
         }
     }
 
